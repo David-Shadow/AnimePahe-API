@@ -9,7 +9,7 @@ async def run_async_app():
     # Replace this with your actual async app code
     pass
 
-if name == 'main':
+if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     
     flask_task = loop.create_task(run_flask_app())
