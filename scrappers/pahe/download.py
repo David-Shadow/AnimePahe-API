@@ -10,8 +10,11 @@ def pahe_download(idx):
     # idx = "3ab9a35e-3cc4-6dac-6c47-042da51a20bf$0e9ac900494c3e18df6fcdd39c8fc0f978a05436745df190c0b734108d1963b3"
     download_url = kwix_extractor(idx)
     chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
+    options.add_argument("--disable-notifications")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--blink-settings=imagesEnabled=false")
+    options.add_argument("--ignore-certificate-errors")
+    options.add_argument("--ignore-ssl-errors")
 
     print(download_url)
     driver = webdriver.Chrome("chromedriver.exe", options=chrome_options)
