@@ -7,6 +7,7 @@ async def run_flask_app():
 async def run_async_app():
     # Your async app logic goes here
     # Replace this with your actual async app code
+    pass
 
 if name == 'main':
     loop = asyncio.get_event_loop()
