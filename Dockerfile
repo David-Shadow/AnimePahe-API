@@ -1,5 +1,8 @@
 FROM python:3.9
 
+WORKDIR /app
+RUN chmod 777 /app
+
 # Install Chrome WebDriver
 RUN CHROMEDRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
     mkdir -p /opt/chromedriver-$CHROMEDRIVER_VERSION && \
