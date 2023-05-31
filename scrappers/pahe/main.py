@@ -22,7 +22,7 @@ class AnimePahe():
             
         except Exception as e:
             logger.info(f"AnimePahe - {e}")
-            results = {"results": []}
+            results = {"results": [e]}
             return results
 
     def info(self, id):
@@ -46,7 +46,7 @@ class AnimePahe():
 
         except Exception as e:
             logger.info(f"AnimePahe - {e}")
-            episodes = {"episodes": []}
+            episodes = {"episodes": [e]}
             return episodes
 
 
