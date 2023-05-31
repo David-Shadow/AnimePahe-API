@@ -19,5 +19,5 @@ RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
-
+COPY index.py .
 CMD ["python","index.py"]
