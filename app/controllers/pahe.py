@@ -18,7 +18,7 @@ def pahe_query(query):
 
 @pahe.route('/info/<id>')
 def pahe_info(id):
-    return jsonify(animepahe.info(id))
+    return animepahe.info(id)
 
 
 @pahe.route('/watch/<episodeId>')
