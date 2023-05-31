@@ -1,7 +1,8 @@
 import requests
 from AnilistPython import Anilist
 anilist = Anilist()
-
+import logging 
+logger = logging.getLogger("AnimePahe")
 class AnimePahe():
     def __init__(self):
         self.host = "https://animepahe.ru/"
@@ -19,7 +20,8 @@ class AnimePahe():
             results = {"results": data}
             return results
             
-        except:
+        except Exception as e:
+            logger.info(f"AnimePahe - {e}")
             results = {"results": []}
             return results
 
@@ -43,7 +45,7 @@ class AnimePahe():
             return episodes
 
         except Exception as e:
-            print(e)
+            logger.info(f"AnimePahe - {e}")
             episodes = {"episodes": []}
             return episodes
 
