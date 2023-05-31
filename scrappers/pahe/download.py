@@ -17,7 +17,7 @@ def pahe_download(idx):
     options.add_argument("--ignore-ssl-errors")
 
     print(download_url)
-    driver = webdriver.Chrome("chromedriver.exe", options=chrome_options)
+    driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
     driver.get(download_url[0])
 
     token = ""
