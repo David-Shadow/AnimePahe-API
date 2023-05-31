@@ -4,7 +4,8 @@ from scrappers.pahe.download import pahe_download
 
 pahe = Blueprint('pahe', __name__)
 animepahe = AnimePahe()
-
+import logging
+logger = logging.getLogger("pahedl")
 @pahe.route('/')
 def pahe_home():
     result = {"Intro":"Welcome to the animepahe provider: check out the provider's website @ https://animepahe.ru/","routes":["/:query","/info/:anime-session","/watch/:anime-session/:episode-session"],"documentation":"Not Even Exist. lol", "Note:":"It takes 10-15s to scrap and provide links"}
@@ -24,7 +25,8 @@ def pahe_info(id):
 def pahe_episode(episodeId):
     try:
         return jsonify(pahe_download(episodeId))
-    except:
+    except Exception as e:
+        logger.info(f"AnimePahe - {e}")
         return jsonify({"sources": []})
 
 
