@@ -14,7 +14,7 @@ def pahe_home():
     
 @pahe.route('/<query>')
 def pahe_query(query):
-    return jsonify(animepahe.search(query))
+    return animepahe.search(query)
 
 @pahe.route('/info/<id>')
 def pahe_info(id):
