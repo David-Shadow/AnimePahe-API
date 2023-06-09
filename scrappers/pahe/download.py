@@ -18,7 +18,7 @@ def pahe_download(idx):
 
     print(download_url)
     driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
-    driver.get(download_url[0])
+#     driver.get(download_url[0])
 
     token = ""
     soup = BeautifulSoup(driver.page_source, 'html.parser')
