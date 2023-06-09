@@ -1,6 +1,5 @@
 flask
 AnilistPython
 bs4
-gunicorn
-requests
+curl_cffi
 selenium
