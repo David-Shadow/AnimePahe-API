@@ -1,8 +1,9 @@
-import requests
 from AnilistPython import Anilist
 anilist = Anilist()
 import logging 
 logger = logging.getLogger("AnimePahe")
+from curl_cffi.requests import get
+
 class AnimePahe():
     def __init__(self):
         self.host = "https://animepahe.ru/"
@@ -10,7 +11,7 @@ class AnimePahe():
     def search(self, query):
         try:
             url = f"{self.host}api?m=search&q={query}"
-            r = requests.get(url)
+            r = get(url, impersonate="chrome101")
             dt = r.json()['data']
 
             data = dt.copy()
@@ -28,7 +29,7 @@ class AnimePahe():
     def info(self, id):
         try:
             url = f"{self.host}api?m=release&id={id}&sort=episode_asc"
-            r = requests.get(url)
+            r = get(url, impersonate="chrome101")
             result = r.json()['data']
 
             updated_result = []
