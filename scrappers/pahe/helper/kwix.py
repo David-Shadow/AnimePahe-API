@@ -12,7 +12,7 @@ def kwix_extractor(idx):
         href = a_tag.get('href')
         if href:
             links.append(href)
-
+    print(links)
     filtered_links = [link for link in links if link.startswith("https://pahe.win")]
     g = requests.get(filtered_links[1])
     soup = BeautifulSoup(g.text, 'html.parser')
