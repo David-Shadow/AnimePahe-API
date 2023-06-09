@@ -10,9 +10,9 @@ def pahe_download(idx):
     download_url = kwix_extractor(idx)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
+#     chrome_options.add_argument("--disable-gpu")
 
-    print(download_url)
+#     print(download_url)
     driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
     # Rest of your code...
 
