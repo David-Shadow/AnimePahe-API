@@ -12,9 +12,9 @@ def pahe_download(idx):
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
 
-    uc.install()
+#     uc.install()
     driver = webdriver.Chrome(options=chrome_options)
-    driver = uc.Chrome()
+#     driver = uc.Chrome()
 
 #     driver.get(download_url[0])
 
