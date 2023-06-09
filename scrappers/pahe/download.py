@@ -5,7 +5,6 @@ from scrappers.pahe.helper.kwix import kwix_extractor
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
 def pahe_download(idx):
     # idx = "3ab9a35e-3cc4-6dac-6c47-042da51a20bf$0e9ac900494c3e18df6fcdd39c8fc0f978a05436745df190c0b734108d1963b3"
     download_url = kwix_extractor(idx)
@@ -14,7 +13,9 @@ def pahe_download(idx):
     chrome_options.add_argument("--disable-gpu")
 
     print(download_url)
-    driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
+    driver = webdriver.Chrome("/usr/local/bin/chromedriver", chrome_options=chrome_options)
+    # Rest of your code...
+
 #     driver.get(download_url[0])
 
 #     token = ""
