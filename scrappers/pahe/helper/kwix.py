@@ -13,12 +13,12 @@ def kwix_extractor(idx):
         if href:
             links.append(href)
     print(links)
-    filtered_links = [link for link in links if link.startswith("https://pahe.win")]
-    g = requests.get(filtered_links[1])
-    soup = BeautifulSoup(g.text, 'html.parser')
-    urls = soup.find_all('a', href=lambda href: href and 'https://kwik.cx/f/' in href)
-    download_url = []
-    for url in urls:
-        download_url.append(url['href'])
+#     filtered_links = [link for link in links if link.startswith("https://pahe.win")]
+#     g = requests.get(filtered_links[1])
+#     soup = BeautifulSoup(g.text, 'html.parser')
+#     urls = soup.find_all('a', href=lambda href: href and 'https://kwik.cx/f/' in href)
+#     download_url = []
+#     for url in urls:
+#         download_url.append(url['href'])
 
-    return download_url
+#     return download_url
