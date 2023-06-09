@@ -7,14 +7,15 @@ from selenium.webdriver.chrome.options import Options
 import undetected_chromedriver as uc
 
 def pahe_download(idx):
-    # idx = "3ab9a35e-3cc4-6dac-6c47-042da51a20bf$0e9ac900494c3e18df6fcdd39c8fc0f978a05436745df190c0b734108d1963b3"
     download_url = kwix_extractor(idx)
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
 
-#     print(download_url)
+    uc.install()
+    driver = webdriver.Chrome(options=chrome_options)
     driver = uc.Chrome()
+
 #     driver.get(download_url[0])
 
 #     token = ""
