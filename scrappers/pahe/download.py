@@ -13,7 +13,7 @@ def pahe_download(idx):
     chrome_options.add_argument("--disable-gpu")
 
     print(download_url)
-    driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
+    driver = webdriver.Chrome("/usr/local/bin/chromedriver")
     driver.get(download_url[0])
 
     token = ""
