@@ -3,3 +3,4 @@ AnilistPython
 bs4
 curl_cffi
 selenium
+requests
