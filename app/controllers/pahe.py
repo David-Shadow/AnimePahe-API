@@ -27,6 +27,6 @@ def pahe_episode(episodeId):
         return jsonify(pahe_download(episodeId))
     except Exception as e:
         logger.info(f"AnimePahe - {e}")
-        return jsonify({"sources": []})
+        return jsonify({"sources": [], 'err': e})
 
 
